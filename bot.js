@@ -1315,6 +1315,17 @@ channel.send({embed : embed});
 })
 
 
+client.on('message', ( msg ) => {
+    let command = msg.content.split(' ')[0];
+    let args = msg.content.split(' ').slice(1);
+    var prefix = "+";
+    
+    if( command != prefix + 'prune' ) return;
+    let count = parseInt(args[0]) || 1;
+    msg.delete();
+    msg.channel.bulkDelete(Math.min(count, 100));
+});
+
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
