@@ -1208,30 +1208,7 @@ client.on('message', message => {
   }
 });
 
-client.on('message', message => {
-    if (message.content.startsWith("رابط")) {
-        message.channel.createInvite({
-        thing: true,
-        maxUses: 1,
-        maxAge: 3600,
-    }).then(invite =>
-      message.author.sendMessage(invite.url)
-    )
-    const embed = new Discord.RichEmbed()
-        .setColor("RANDOM")
-          .setDescription("تم أرسال الرابط برسالة خاصة")
-           .setAuthor(client.user.username, client.user.avatarURL)
-                 .setAuthor(client.user.username, client.user.avatarURL)
-                .setFooter('طلب بواسطة: ' + message.author.tag)
 
-      message.channel.sendEmbed(embed).then(message => {message.delete(10000)})
-              const Embed11 = new Discord.RichEmbed()
-        .setColor("RANDOM")
-        
-    .setDescription("** الرابط : ساعه | عدد استخدامات الرابط : 1**")
-      message.author.sendEmbed(Embed11)
-    }
-}); 
 
  client.on('message', message => {
                     var prefix = "#";
@@ -1321,8 +1298,23 @@ client.on('message', message => {
     });
 
 
+client.on('message', message => {
+     if (message.content === "رابط") {
+     let embed = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+  .setColor("#9B59B6")
+  .addField(" Done | تــــم" , " |  تــــم ارســالك في الخــاص")
 
 
+ client.on('message', message => {
+     if (message.content === "رابط") {
+message.author.send("***رابط كلان زد***" + `  **
 
+https://discord.gg/2UJV6Hp
+
+**`);
+    }
+});          
+     
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
