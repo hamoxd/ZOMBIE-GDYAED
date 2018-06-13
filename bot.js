@@ -1284,6 +1284,26 @@ https://discord.gg/2UJV6Hp
 **`);
     }
 });          
+
+
+
+client.on("message", function(message) {
+
+  const bannedwords = [
+    "كسمك",
+    "امك شرموطه",
+    "قحبه",
+    "متناك",
+    "زبي",
+    "حط الكلمه الممنوعه هنا"
+
+  ];
+
+  if(bannedwords.some(word => message.content.includes(word))) {
+    message.delete()
+    message.reply("لا تسب");
+  };
+});
      
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
