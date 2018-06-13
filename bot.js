@@ -794,7 +794,7 @@ if (message.content === '^^invite') {
   
 
 client.on('message', message => {
-     if (message.content === "^^invite") {
+     if (message.content === "رابط") {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#9B59B6")
@@ -910,32 +910,6 @@ client.on('message', message => {
   }
 });  
 
-
-client.on('message', message => {
- if (message.content.startsWith("!")) {
-                                 var mentionned = message.mentions.users.first();
-             var mentionavatar;
-               if(mentionned){
-                   var mentionavatar = mentionned;
-               } else {
-                   var mentionavatar = message.author;
-                   
-               }
-               let bot;
-               if(message.author.bot) {
-                   bot = 'Bot'
-               } else {
-                   bot = 'User'
-               } 
-  var EsTeKnAN = new Discord.RichEmbed()
-  .setColor('RANDOM')
-  .setThumbnail(`${mentionavatar.avatarURL}`)
-  .addField("***شكرا الانضمامك الينا***" ,mentionavatar.username )
-  .setDescription('***XxGamingTeamxX***')
-  .setImage('http://www.imgion.com/images/01/Welcome-buddy.jpg')
-   message.channel.sendEmbed(EsTeKnAN);
-  }
-});  
 
 
   
