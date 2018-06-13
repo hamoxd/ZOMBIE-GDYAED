@@ -1295,16 +1295,33 @@ client.on("message", function(message) {
     "قحبه",
     "متناك",
     "زبي",
-    "حط الكلمه الممنوعه هنا"
+    "امك"
 
   ];
 
   if(bannedwords.some(word => message.content.includes(word))) {
     message.delete()
-    message.reply("لا تسب");
+    message.reply("لا تسب يا توتو");
   };
 });
 
+client.on("message", function(message) {
+
+  const bannedwords = [
+    "شرموط",
+    "امك شرموطه",
+    "قحبتي",
+    "المتناكه",
+    "مص",
+    "ابوك"
+
+  ];
+
+  if(bannedwords.some(word => message.content.includes(word))) {
+    message.delete()
+    message.reply("لا تسب يا توتو");
+  };
+});
 
 var prefix = "#";
 client.on("message", message => {
