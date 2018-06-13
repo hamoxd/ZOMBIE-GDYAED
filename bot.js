@@ -904,7 +904,7 @@ client.on('message', message => {
   .setColor('RANDOM')
   .setThumbnail(`${mentionavatar.avatarURL}`)
   .addField("***شكرا الانضمامك الينا***" ,mentionavatar.username )
-  .setDescription('***``WELCOME_TO_Z``***')
+  .setDescription('***``WELCOME TO Z CLAN``***')
   .setImage('http://www.imgion.com/images/01/Welcome-buddy.jpg')
    message.channel.sendEmbed(EsTeKnAN);
   }
