@@ -1315,7 +1315,11 @@ client.user.setGame(`Z_4Ever`,"http://twitch.tv/S-F")
 client.user.setStatus("dnd")
 });
 
-
+client.on("guildMemberAdd", member => {
+  member.createDM().then(function (channel) {
+  return channel.send(`**WELCOME TO CLAN ZOMBIE** ${member} `) 
+}).catch(console.error)
+})
 
 
 
