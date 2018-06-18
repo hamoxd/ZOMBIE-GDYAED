@@ -794,7 +794,7 @@ if (message.content === '^^invite') {
   
 
 client.on('message', message => {
-     if (message.content === "رابط") {
+     if (message.content === "******") {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#9B59B6")
