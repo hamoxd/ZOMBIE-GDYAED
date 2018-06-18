@@ -1275,15 +1275,6 @@ client.on('message', message => {
 
 
 
- client.on('message', message => {
-     if (message.content === "رابط") {
-message.author.send("***رابط كلان زد***" + `  **
-
-https://discord.gg/2UJV6Hp
-
-**`);
-    }
-});          
 
 
 
