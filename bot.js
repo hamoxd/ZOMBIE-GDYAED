@@ -48,7 +48,7 @@ client.on('guildMemberAdd', member => {
                      
                                      .addField(' الـسيرفر', `${member.guild.name}`,true)
                                        
-     .setFooter("**!!**")
+     .setFooter("***!!***")
         .setTimestamp()
    
       channel.sendEmbed(embed);
@@ -65,8 +65,8 @@ client.on('message', msg => {
     
 client.on('message', message => {
      if (message.content === "رابط") {
-message.author.send("***WELCOME TO Kingdom of Death***" + `  **
-https://discord.gg/gzCfuMK
+message.author.send("***!!***" + `  **
+https://discord.gg/yNu9wE8
 **`);
     }
 });      
@@ -202,7 +202,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : i1Suhaib ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`لعنت الحرب`,"http://twitch.tv/S-F")
+client.user.setGame(`!!`,"http://twitch.tv/S-F")
 client.user.setStatus("dnd")
 });
 
