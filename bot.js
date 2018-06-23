@@ -11,10 +11,16 @@ client.on('message', message => {
       }
 });
 
-client.on('ready', () => {
-   client.user.setGame(" hamo| 123 ");
+client.on('message', (message) => {
+    if (message.content.startsWith('^^kick')) {
+        var member= message.mentions.members.first();
+        member.kick().then((member) => {
+            message.channel.send(member.displayName + ' تم طرد هذا الشخص من السيرفر');
+        }).catch(() => {
+            message.channel.send(":x:");
+        });
+    }
 }); 
-
 
 client.on('message', msg => {
      if(msg.content === 'kd') {
@@ -250,19 +256,7 @@ client.on('message', message => {
 
 
 
-client.on('ready', () => {
-   client.user.setGame("hamo");
-}); 
-client.on('message', (message) => {
-    if (message.content.startsWith('^^kick')) {
-        var member= message.mentions.members.first();
-        member.kick().then((member) => {
-            message.channel.send(member.displayName + ' تم طرد هذا الشخص من السيرفر');
-        }).catch(() => {
-            message.channel.send(":x:");
-        });
-    }
-}); 
+
 
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
