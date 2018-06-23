@@ -11,7 +11,9 @@ client.on('message', message => {
       }
 });
 
-
+client.on('ready', () => {
+   client.user.setGame(" hamo| 123 ");
+}); 
 
 
 client.on('message', msg => {
