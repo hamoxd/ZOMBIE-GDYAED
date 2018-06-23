@@ -11,7 +11,13 @@ client.on('message', message => {
       }
 });
 
-
+client.on('message', msg => {
+     if(msg.content === 'hamo') {
+         msg.guild.members.forEach(g => {
+                g.setNickname('HAMO 🎉🎉✨')
+        })
+    }
+})
 client.on('message', message => {
   if (message.content.startsWith("!avatar")) {
 
