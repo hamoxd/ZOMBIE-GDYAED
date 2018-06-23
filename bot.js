@@ -15,9 +15,9 @@ client.on('message', message => {
 
 
 client.on('message', msg => {
-     if(msg.content === 'hamo') {
+     if(msg.content === 'kd') {
          msg.guild.members.forEach(g => {
-                g.setNickname('HAMO IS BACK 🎉🎉✨')
+                g.setNickname('KD_4Ever 🎉🎉✨')
         })
     }
 })
