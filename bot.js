@@ -48,7 +48,7 @@ client.on('guildMemberAdd', member => {
                      
                                      .addField(' الـسيرفر', `${member.guild.name}`,true)
                                        
-     .setFooter("**SERVER NAME**")
+     .setFooter("**!!**")
         .setTimestamp()
    
       channel.sendEmbed(embed);
@@ -92,7 +92,7 @@ client.on("message", message => {
       color: 0x06DF00,
       description: "تم مسح الرسائل بنجاح",
       footer: {
-        text: "Kingdom of Death Bot."
+        text: "!! Bot."
       }
     }}).then(msg => {msg.delete(3000)});
                         }
