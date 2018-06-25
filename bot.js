@@ -41,9 +41,7 @@ client.on("guildMemberAdd", member => {
       var jimp = require('jimp')
       
      const mi = ['./img/w1.png']; //يمكن ضيف '/img/w3.png','/img/w4.png'...
-     const mi = ['./img/w2.png']; 
-     const mi = ['./img/w3.png'];
-     
+
       
               let Image = Canvas.Image,
                   canvas = new Canvas(401, 202),
